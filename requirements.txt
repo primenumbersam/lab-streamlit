@@ -1,1 +1,10 @@
 streamlit
+altair
+numpy>=2.0.1
+pandas>=2.2.3
+vega_datasets
+faker
+yfinance>=0.2.55
+Pillow>=9.5.0
+google-generativeai
+PyPDF2
