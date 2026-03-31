@@ -14,12 +14,12 @@ A comprehensive collection of Streamlit experiments, data dashboards, and AI-pow
 
 ## 🧪 Demos Pages
 
-1.  **Home**: Interactive Altair charts and selection-enabled dataframes.
-2.  **🌍 Top Stocks**: A visual ranking. Derived from `companiesmarketcap.com` data and logos (provided in CSV). File: `1_us-stock-top-mktcap.py`
-3.  **📈 US Top Stock Peers**: Comparative analysis. Fetches real-time market data using the `yfinance` package. File: `2_us-stock-top-compare.py`
-4.  **🗺️ GDP Dashboard**: Historical GDP analysis. Visualizes pre-saved World Bank data (in CSV). File: `3_global-gdp-compare.py`
-5.  **🤖 Gemini File Q&A**: RAG tool using Gemini 3.1 Flash Lite. File: `4_llm-gemini-rag.py`
-6.  **📊 KOSIS Visual & Wealth Data**: KOSIS visual embed and wealth inequality chart (WID data). File: `5_kr-kosis-embed.py`
+- **Home**: Interactive Altair charts and selection-enabled dataframes.
+- **🌍 Top Stocks**: A visual ranking. Derived from `companiesmarketcap.com` data and logos (provided in CSV). File: `1_us-stock-top-mktcap.py`
+- **📈 US Top Stock Peers**: Comparative analysis. Fetches real-time market data using the `yfinance` package. File: `2_us-stock-top-compare.py`
+- **🗺️ GDP Dashboard**: Historical GDP analysis. Visualizes pre-saved World Bank data (in CSV). File: `3_global-gdp-compare.py`
+- **🤖 Gemini File Q&A**: RAG tool using Gemini 3.1 Flash Lite. File: `4_llm-gemini-rag.py`
+- **📊 KOSIS & Wealth Data**: KOSIS visual embed and wealth inequality chart (WID data). File: `5_kr-kosis-embed.py`
 
 ## 🏗️ Project Structure
 

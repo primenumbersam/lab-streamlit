@@ -32,10 +32,10 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("📊 KOSIS 경제 시각화 및 부의 불평등 분석")
+st.title("📊 Data: KOSIS + WID")
 
 # 1. KOSIS Embeds
-st.subheader("🌐 KOSIS 국가통계포털 시각화")
+st.subheader("🌐 KOSIS 국가통계포털")
 
 col1, col2 = st.columns(2)
 
@@ -82,7 +82,7 @@ try:
     
     st.line_chart(chart_data, height=450, use_container_width=True)
     
-    st.info("💡 **데이터 설명**: 상위 10%와 하위 50%의 자산 비율(Top 10 / Bottom 50 ratio)을 나타냅니다. USA 데이터와 같은 비정상적 수치(하위 50%의 순자산이 0에 가깝거나 음수인 경우)를 보정하기 위해 **0~800 구간으로 Clipping(제한)**하여 시각화했습니다. (출처: WID)")
+    st.info("💡 데이터 설명: 상위 10%와 하위 50%의 자산 비율(Top 10 / Bottom 50 ratio)을 나타냅니다. USA 데이터와 같은 비정상적 수치(하위 50%의 순자산이 0에 가깝거나 음수인 경우)를 보정하기 위해 0~800 구간으로 Clipping(제한)하여 시각화 함. (출처: WID)")
     
 except Exception as e:
     st.error(f"데이터를 불러오는 중 오류가 발생했습니다: {e}")
