@@ -70,17 +70,19 @@ try:
     df = df.dropna(subset=["Year"])
     df["Year"] = df["Year"].astype(int)
     
-    # Round values to 0 decimal places
+    # Round values and apply Clipping (handling extreme outliers)
     countries = ["Korea", "Japan", "USA", "Denmark"]
     for col in countries:
-        df[col] = pd.to_numeric(df[col], errors='coerce').round(0)
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+        # Apply clipping: 0 to 800 (USA extreme spikes are handled here)
+        df[col] = df[col].clip(lower=0, upper=800).round(0)
     
     # Premium Chart using Streamlit native line chart
     chart_data = df.set_index("Year")[countries]
     
     st.line_chart(chart_data, height=450, use_container_width=True)
     
-    st.info("💡 데이터 설명: 상위 10%와 하위 50%의 자산 비율(Top 10 / Bottom 50 ratio)을 나타냅니다. 모든 수치는 소수점 첫째 자리에서 반올림되었습니다. (출처: World Inequality Database)")
+    st.info("💡 **데이터 설명**: 상위 10%와 하위 50%의 자산 비율(Top 10 / Bottom 50 ratio)을 나타냅니다. USA 데이터와 같은 비정상적 수치(하위 50%의 순자산이 0에 가깝거나 음수인 경우)를 보정하기 위해 **0~800 구간으로 Clipping(제한)**하여 시각화했습니다. (출처: WID)")
     
 except Exception as e:
     st.error(f"데이터를 불러오는 중 오류가 발생했습니다: {e}")
