@@ -28,7 +28,7 @@ st.set_page_config(
 st.sidebar.success("느좋 데이러 싸이언스")
 
 # Landing Page Content (Kept as per user request for markdown additions)
-st.title("🚀 Streamlit Multi-Page Lab")
+st.title("🚀 Streamlit Multi-Page Demo")
 st.markdown("""
 Welcome to your integrated Streamlit workspace! This project combines multiple quickstart templates and interactive demos into a single multi-page application.
 
