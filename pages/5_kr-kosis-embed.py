@@ -53,34 +53,34 @@ with col2:
 
 # 2. Wealth Inequality Chart (WID Data)
 st.divider()
-st.subheader("📉 한국 vs 미국 부의 집중도 비교 (WID Data)")
+st.subheader("📉 국가별 부의 집중도 비교 (WID Data)")
 
 try:
     # CSV Load - skipping header lines and handling semi-colon delimiter
-    # Based on file check: data starts at line 9, columns are Percentile;Year;Korea;USA
+    # Based on file check: data starts at line 14, columns: Percentile;Year;Korea;Japan;USA;Denmark
     df = pd.read_csv(
-        "data/WID_Data_26032026-113857.csv", 
+        "data/data-wid.csv", 
         sep=";", 
-        skiprows=8, 
-        names=["Percentile", "Year", "Korea", "USA"],
+        skiprows=13, 
+        names=["Percentile", "Year", "Korea", "Japan", "USA", "Denmark"],
         index_col=False
     )
     
     # Filter and clean
-    df = df.dropna(subset=["Year", "Korea", "USA"])
+    df = df.dropna(subset=["Year"])
     df["Year"] = df["Year"].astype(int)
     
-    # Premium Chart using Streamlit native line chart
-    chart_data = df.set_index("Year")[["Korea", "USA"]]
+    # Round values to 0 decimal places
+    countries = ["Korea", "Japan", "USA", "Denmark"]
+    for col in countries:
+        df[col] = pd.to_numeric(df[col], errors='coerce').round(0)
     
-    # Scaling note: The data seems to be ratio or index. 
-    # Some US values are negative or very large in recent years, might need filtering or just plot as is.
-    # Looking at data: 2017 USA value was -11602.9775, likely an outlier or specific data event in WID.
-    # We will plot the main trend.
+    # Premium Chart using Streamlit native line chart
+    chart_data = df.set_index("Year")[countries]
     
     st.line_chart(chart_data, height=450, use_container_width=True)
     
-    st.info("💡 **데이터 설명**: 상위 10%와 하위 50%의 자산 비율(Top 10 / Bottom 50 ratio)을 나타냅니다. (출처: World Inequality Database)")
+    st.info("💡 데이터 설명: 상위 10%와 하위 50%의 자산 비율(Top 10 / Bottom 50 ratio)을 나타냅니다. 모든 수치는 소수점 첫째 자리에서 반올림되었습니다. (출처: World Inequality Database)")
     
 except Exception as e:
     st.error(f"데이터를 불러오는 중 오류가 발생했습니다: {e}")

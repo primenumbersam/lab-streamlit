@@ -30,7 +30,7 @@ lab-streamlit/
 ├── data/
 │   ├── data-gdp.csv           # World Bank GDP dataset
 │   ├── data-stock-us.csv      # Top companies market cap dataset
-│   └── WID_Data_26032026-113857.csv # World Inequality Database (Wealth)
+│   └── data-wid.csv           # World Inequality Database (Wealth)
 ├── pages/                     # Multi-page implementation
 │   ├── 1_us-stock-top-mktcap.py
 │   ├── 2_us-stock-top-compare.py
