@@ -27,17 +27,33 @@ st.set_page_config(
 # Sidebar Navigation Hint
 st.sidebar.success("느좋 데이러 싸이언스")
 
+# Custom CSS to adjust st.title font size (Example)
+st.markdown("""
+    <style>
+    /* Change the font size of st.title (h1) */
+    .stHeadingContainer h1 {
+        font-size: 1.8rem !important;
+        color: #1e3a8a;
+    }
+    /* Change the font size of st.header (h2) */
+    .stHeadingContainer h2 {
+        font-size: 1.4rem !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Landing Page Content (Kept as per user request for markdown additions)
 st.title("🚀 Streamlit Multi-Page Demo")
 st.markdown("""
 Welcome to your integrated Streamlit workspace! This project combines multiple quickstart templates and interactive demos into a single multi-page application.
 
 ### 🧪 Available Demos:
-1.  **Home (This page)**: Current Altair and Interactive Dataframe demo.
+1.  **🏠 [Home (This page)](./)**: Current Altair and Interactive Dataframe demo.
 2.  **🌍 [Top Stocks](./us-stock-top-mktcap)**: Ranking of the world's largest companies by market cap with logos.
 3.  **📈 [US Top Stock Peers](./us-stock-top-compare)**: Comparative analysis of stock market peers using Yahoo Finance.
 4.  **🗺️ [GDP Dashboard](./global-gdp-compare)**: Global GDP analysis from World Bank data.
 5.  **🤖 [Gemini File Q&A](./llm-gemini-rag)**: Document answering using Google Gemini (PDF/TXT/MD support).
+6.  **📊 [KOSIS & WID](./kr-kosis-embed)**: KOSIS website embeds and wealth inequality data visualization.
 
 ---
 """)
