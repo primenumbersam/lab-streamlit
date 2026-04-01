@@ -31,12 +31,12 @@ st.sidebar.success("느좋 데이러 싸이언스")
 st.markdown("""
     <style>
     /* Change the font size of st.title (h1) */
-    .stHeadingContainer h1 {
+    div[data-testid="stMarkdownContainer"] h1 {
         font-size: 1.8rem !important;
         color: #1e3a8a;
     }
     /* Change the font size of st.header (h2) */
-    .stHeadingContainer h2 {
+    div[data-testid="stMarkdownContainer"] h2 {
         font-size: 1.4rem !important;
     }
     </style>
