@@ -7,6 +7,15 @@ import yfinance as yf
 import pandas as pd
 import altair as alt
 
+# Custom CSS
+st.markdown("""
+    <style>
+    .block-container {
+        padding-top: 1rem !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Page Title
 st.title(":material/query_stats: Stock Peer Analysis")
 st.markdown("Easily compare stocks against others in their peer group.")

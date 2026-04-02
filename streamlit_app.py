@@ -27,7 +27,7 @@ st.set_page_config(
 # Sidebar Navigation Hint
 st.sidebar.success("느좋 데이러 싸이언스")
 
-# Custom CSS to adjust st.title font size (Example)
+# Custom CSS
 st.markdown("""
     <style>
     /* Reduce the top margin of the page */
@@ -43,12 +43,12 @@ st.markdown("""
 Welcome to your integrated Streamlit workspace! This project combines multiple quickstart templates and interactive demos into a single multi-page application.
 
 ### 🧪 Available Demos:
-1.  **🏠 [Home (This page)](./)**: Current Altair and Interactive Dataframe demo.
-2.  **🌍 [Top Stocks](./us-stock-top-mktcap)**: Ranking of the world's largest companies by market cap with logos.
-3.  **📈 [US Top Stock Peers](./us-stock-top-compare)**: Comparative analysis of stock market peers using Yahoo Finance.
-4.  **🗺️ [GDP Dashboard](./global-gdp-compare)**: Global GDP analysis from World Bank data.
-5.  **🤖 [Gemini File Q&A](./llm-gemini-rag)**: Document answering using Google Gemini (PDF/TXT/MD support).
-6.  **📊 [KOSIS & WID](./kr-kosis-embed)**: KOSIS website embeds and wealth inequality data visualization.
+- **🏠 [Home (This page)](./)**: Current Altair and Interactive Dataframe demo.
+- **🤖 [Gemini File Q&A](./llm-gemini-rag)**: Document answering using Google Gemini (PDF/TXT/MD support).
+- **🌍 [Top Stocks](./us-stock-top-mktcap)**: Ranking of the world's largest companies by market cap with logos.
+- **📈 [US Top Stock Peers](./us-stock-top-compare)**: Comparative analysis of stock market peers using Yahoo Finance.
+- **🗺️ [GDP Dashboard](./global-gdp-compare)**: Global GDP analysis from World Bank data.
+- **📊 [KOSIS & WID](./kr-kosis-embed)**: KOSIS website embeds and wealth inequality data visualization.
 
 ---
 """)
@@ -82,7 +82,7 @@ def get_profile_dataset(number_of_items: int = 20, seed: int = 0) -> pd.DataFram
 
 
 #######################################
-st.subtitle("Altair Library") 
+st.subheader("Altair Library") 
 stock_data = get_data()
 
 # Events in altair
@@ -153,7 +153,7 @@ st.altair_chart(combined_chart, use_container_width=True)
 
 
 #######################################
-st.subtitle("Get dataframe row-selections")
+st.subheader("Get dataframe row-selections")
 
 column_configuration = {
     "name": st.column_config.TextColumn(
