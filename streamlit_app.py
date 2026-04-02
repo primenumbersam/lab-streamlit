@@ -30,14 +30,9 @@ st.sidebar.success("느좋 데이러 싸이언스")
 # Custom CSS to adjust st.title font size (Example)
 st.markdown("""
     <style>
-    /* Change the font size of st.title (h1) */
-    div[data-testid="stMarkdownContainer"] h1 {
-        font-size: 1.8rem !important;
-        color: #1e3a8a;
-    }
-    /* Change the font size of st.header (h2) */
-    div[data-testid="stMarkdownContainer"] h2 {
-        font-size: 1.4rem !important;
+    /* Reduce the top margin of the page */
+    .block-container {
+        padding-top: 1rem !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -87,7 +82,7 @@ def get_profile_dataset(number_of_items: int = 20, seed: int = 0) -> pd.DataFram
 
 
 #######################################
-st.title("Altair") 
+st.subtitle("Altair Library") 
 stock_data = get_data()
 
 # Events in altair
@@ -158,7 +153,7 @@ st.altair_chart(combined_chart, use_container_width=True)
 
 
 #######################################
-st.title("Get dataframe row-selections")
+st.subtitle("Get dataframe row-selections")
 
 column_configuration = {
     "name": st.column_config.TextColumn(

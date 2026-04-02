@@ -10,8 +10,8 @@ import datetime
 # st.set_page_config(layout="wide") # Commented out as it should be in main
 
 # Vykreslení tabulky s logy
-st.markdown("<h1 style='text-align: center;'>Top Global Companies Ranking</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 20px;'>By Market Capitalization in Billions of USD</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 14px;'>Top Global Companies Ranking</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 12px;'>By Market Capitalization in Billions of USD</p>", unsafe_allow_html=True)
 st.write("")
 
 # Load the data

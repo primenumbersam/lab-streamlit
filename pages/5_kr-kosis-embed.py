@@ -12,22 +12,12 @@ st.set_page_config(
 # Custom CSS for premium styling
 st.markdown("""
     <style>
-    .main {
-        background-color: #f8f9fa;
-    }
-    .stHeadingContainer h1 {
-        color: #1e3a8a;
-        font-family: 'Inter', sans-serif;
-        font-weight: 800;
-        margin-bottom: 2rem;
-    }
     .embed-container {
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         margin-bottom: 2rem;
-        background: white;
-        padding: 10px;
+        padding: 5px;
     }
     </style>
     """, unsafe_allow_html=True)
