@@ -12,6 +12,9 @@ st.set_page_config(
 # Custom CSS for premium styling
 st.markdown("""
     <style>
+    .block-container {
+        padding-top: 1rem !important;
+    }
     .embed-container {
         border-radius: 12px;
         overflow: hidden;

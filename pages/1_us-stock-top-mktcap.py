@@ -6,18 +6,6 @@ import io
 import os
 import datetime
 
-# Page configuration (handled by main app, but we can set title for this page)
-# st.set_page_config(layout="wide") # Commented out as it should be in main
-
-# Custom CSS
-st.markdown("""
-    <style>
-    .block-container {
-        padding-top: 1rem !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
 # Vykreslení tabulky s logy
 st.markdown("<h1 style='text-align: center; font-size: 20px;'>Top Global Companies Ranking</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 18px;'>By Market Capitalization in Billions of USD</p>", unsafe_allow_html=True)
